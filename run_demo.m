@@ -7,6 +7,7 @@
 set_rotation_vector = [pi/3;-pi/4;pi/6];
 % rotation center: 3*1 [x y z]
 set_rotation_center = [0;1;3];
+
 %% Prepare origin points and lines in 3D
 % N points: N*3 [x y z]
 point_set_1 = [1,0,0;1,1,0;2,1,0;2,0,0;2,0.5,0;1.5,0,0;1,0.5,0;1.5,1,0];
@@ -16,6 +17,7 @@ line_set_pt_1 = [1.2 0.2 0;1.8 0.8 0;
     1.8 0.8 0;1.3,0.8,0];
 
 %% Calculate target points and lines
+addpath('./utils');
 % N points: N*3 [x y z]
 point_set_2 = forwardTransform(point_set_1,...
     set_rotation_vector,...
