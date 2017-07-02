@@ -1,4 +1,4 @@
-function [ config ] = getConfig()
+function [ config ] = get_config()
 % return config structure 
 % Created by Xiang Li
 % ----------------------------------------- %

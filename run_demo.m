@@ -33,8 +33,8 @@ line_set_2 = formatPoint2Line(line_set_pt_2);
 
 %% Execute the estimation
 tic;
-%Please tune parameters in getConfig.m
-config = getConfig();
+%Please tune parameters in get_config.m
+config = get_config();
 [get_rotation_vector, get_translation_vector]=...
     estimateMotion(config,point_set_1,point_set_2,line_set_1,line_set_2);
 get_rotation_center = rodrigues(get_rotation_vector)*get_translation_vector;
