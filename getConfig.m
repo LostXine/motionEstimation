@@ -1,0 +1,26 @@
+function [ config ] = getConfig()
+% return config structure 
+% Created by Xiang Li
+% ----------------------------------------- %
+% OUTPUT:
+%   - config 1*1 struct
+% you can set the para
+weight_of_points = 10.0;
+weight_of_lines = 10.0;
+weight_of_inertia = 2;
+weight_of_norm = 1;
+ratio_point_orientation = 0.8;
+ratio_point_deviation = 0.6;
+ratio_line_orientation = 50.0;
+% the meaning can be found in paper
+config = struct(...
+    'cp',weight_of_points,...
+    'cl',weight_of_lines,...
+    'ci',weight_of_inertia,...
+    'cn',weight_of_norm,...
+    'c1',ratio_point_orientation,...
+    'c2',ratio_point_deviation,...
+    'c3',ratio_line_orientation...
+);
+end
+
